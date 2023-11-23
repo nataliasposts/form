@@ -6,7 +6,7 @@ type FormDropdownProps = {
   options: string[];
 };
 
-const FormDropdown = ({ name, options }: FormDropdownProps) => {
+const FormDropdown: React.FC<FormDropdownProps> = ({ name, options }) => {
   const { control } = useFormContext();
 
   return (

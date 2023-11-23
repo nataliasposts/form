@@ -7,7 +7,7 @@ type AppProps = {
   children: ReactNode;
 };
 
-const App: React.FC<AppProps> = ({ children }: AppProps) => {
+const App: React.FC<AppProps> = ({ children }) => {
   return (
     <ThemeProvider theme={customTheme}>
       <div className="app">{children}</div>

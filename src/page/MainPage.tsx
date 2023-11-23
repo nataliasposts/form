@@ -1,7 +1,7 @@
 import FormComponent from '../components/FormComponent/FormComponent';
 import './MainPage.scss';
 
-const MainPage = () => {
+const MainPage: React.FC = () => {
   return (
     <main>
       <div className="container main-container">

@@ -1,15 +1,15 @@
 import { ReactNode, createContext, useState, useMemo, useCallback } from 'react';
 
-export interface ModalContextType {
+export type ModalContextType = {
   showModal: (content: ReactNode) => void;
   hideModal: () => void;
-}
+};
 
 export const ModalContext = createContext<ModalContextType | null>(null);
 
-interface ModalProviderProps {
+type ModalProviderProps = {
   children: ReactNode;
-}
+};
 
 const GlobalModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
   const [modalContent, setModalContent] = useState<ReactNode | null>(null);

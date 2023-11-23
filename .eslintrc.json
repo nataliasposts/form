@@ -28,6 +28,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "no-console": ["error", { "allow": ["error"] }],
     "default-param-last": "off",
+    "import/extensions": "off",
     "prettier/prettier": [
       "error",
       {
@@ -43,16 +44,6 @@
       "warn",
       {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never",
-        "js": "never",
-        "jsx": "never"
       }
     ],
     "no-shadow": "off",

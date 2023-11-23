@@ -8,7 +8,7 @@ type FormCheckboxProps = {
   options: string[];
 };
 
-const CheckboxGroup = ({ name, options }: FormCheckboxProps) => {
+const CheckboxGroup: React.FC<FormCheckboxProps> = ({ name, options }) => {
   const { control, setValue } = useFormContext();
   const [showOtherInput, setShowOtherInput] = useState(false);
 
