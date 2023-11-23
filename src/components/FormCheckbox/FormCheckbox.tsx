@@ -1,5 +1,5 @@
 import { Checkbox, FormControlLabel, InputBase } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import FormText from '../../type/enums/FormText';
 
@@ -16,6 +16,16 @@ const CheckboxGroup: React.FC<FormCheckboxProps> = ({ name, options }) => {
     const otherValue = event.target.value;
     setValue(name, otherValue);
   };
+
+  useEffect(() => {
+    const handleFormSubmit = () => {
+      setShowOtherInput(false);
+    };
+    window.addEventListener('submit', handleFormSubmit);
+    return () => {
+      window.removeEventListener('submit', handleFormSubmit);
+    };
+  }, []);
 
   return (
     <div>

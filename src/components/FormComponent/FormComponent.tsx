@@ -36,7 +36,7 @@ const FormComponent: React.FC = () => {
   const methods = useForm<AnswerDto[]>({
     defaultValues: FormDefaultValue
   });
-  const { register, handleSubmit } = methods;
+  const { register, handleSubmit, reset } = methods;
 
   const { data, error } = useQuery<{ getQuestions: QuestionDto[] }>(GET_QUESTIONS);
   const [submitForm, { error: mutationError }] = useMutation(SUBMIT_FORM);
@@ -51,7 +51,7 @@ const FormComponent: React.FC = () => {
       // eslint-disable-next-line
       console.log('Form submitted', input);
       setIsSubmit(true);
-      methods.reset();
+      reset();
     } catch (catchError) {
       console.error('Error submitting form', catchError);
     }

@@ -5,7 +5,6 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import pkg from '@apollo/client';
 const { gql } = pkg;
 
-
 const questions = [
   {
     id: '0',
@@ -201,7 +200,6 @@ const questions = [
   }
 ];
 
-
 const typeDefs = gql`
   type Query {
     getQuestions: [Question]
@@ -248,8 +246,8 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 },
+  listen: { port: 4000 }
 });
 
-  // eslint-disable-next-line
+// eslint-disable-next-line
 console.log(`Server ready at: ${url}`);
