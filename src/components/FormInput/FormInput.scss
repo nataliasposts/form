@@ -1,0 +1,9 @@
+@use "../../styles/variables";
+
+.input {
+  width: 700px;
+  padding: 8px;
+  border-radius: variables.$radious;
+  border: 1px solid #c8c8c8;
+  font-size: 14px;
+}

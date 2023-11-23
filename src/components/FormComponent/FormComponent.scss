@@ -1,0 +1,40 @@
+@use "../../styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: variables.$whiteColor;
+  border-radius: variables.$radious;
+  padding: 30px;
+  width: 750px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 26px;
+}
+
+.form-description {
+  text-align: center;
+  align-self: center;
+  font-size: 14px;
+  width: 550px;
+  margin: 0 0 20px 0;
+}
+
+.item-description {
+  color: variables.$mainColor;
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.item-question {
+  font-size: 18px;
+  width: 700px;
+}
